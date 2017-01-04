@@ -1,0 +1,332 @@
+body {
+    background-color: #fafafa;
+    color: #757575;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+button {
+    background: 0 0;
+    border: none;
+    border-radius: 2px;
+    color: #757575;
+    position: relative;
+    height: 36px;
+    margin: 0;
+    min-width: 64px;
+    padding: 0 16px;
+    display: inline-block;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    overflow: hidden;
+    will-change: box-shadow;
+    transition: box-shadow .2s cubic-bezier(.4,0,1,1),background-color .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1);
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    line-height: 36px;
+    vertical-align: middle;
+}
+
+button:hover {
+    background-color: rgba(158,158,158,.2);
+}
+
+button:active {
+    background-color: rgba(158,158,158,.4);
+}
+
+button.icon {
+    border-radius: 50%;
+    font-size: 24px;
+    height: 32px;
+    margin-left: 0;
+    margin-right: 0;
+    min-width: 32px;
+    width: 32px;
+    padding: 0;
+    overflow: hidden;
+    line-height: normal;
+}
+
+button .material-icons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-12px,-12px);
+    line-height: 24px;
+    width: 24px;
+    vertical-align: middle;
+}
+
+input {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: #757575;
+    padding: .5em;
+    border-radius: 2px;
+    border: 1px solid lightgray;
+    outline: none;
+}
+
+main {
+    background: #fff;
+    width: 700px;
+    margin: 70px auto;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    color: white;
+    background-color: #222;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+header h1 {
+    display: inline-block;
+    color: #00d8ff;
+    margin: 1rem auto;
+}
+
+/* Stats */
+.stats {
+    margin: 10px;
+}
+
+.stats table {
+    margin: auto;
+}
+
+.stats th {
+    text-align: right;
+    font-weight: normal;
+    letter-spacing: 2px;
+    font-size: .7em;
+}
+
+.stats td {
+    text-align: left;
+    font-size: 1.5rem;
+    font-family: monospace;
+}
+
+
+
+/* Stopwatch */
+.stopwatch {
+    padding: 15px 10px 5px 10px;
+}
+
+.stopwatch-time {
+    font-family: monospace;
+    font-size: 2em;
+}
+
+.stopwatch-controls button {
+    margin: 5px;
+    color: white;
+}
+
+
+/* Todo */
+.todo {
+    display: flex;
+    font-size: 1rem;
+    border-top: 1px solid rgba(0,0,0,.1);
+    background-color: #fff;
+    transition: all .2s;
+    -webkit-user-select: none;
+    user-select: none;
+    padding: 1em;
+    align-items: center;
+}
+
+.todo.completed * {
+    color: lightgray;
+}
+
+.todo.completed .todo-title {
+    text-decoration: line-through;
+}
+
+.todo .todo-title {
+    margin-right: auto;
+}
+
+.todo .checkbox {
+    margin-right: .5rem;
+}
+
+.todo button:not(.checkbox) {
+    opacity: 0;
+    transition: all .2s;
+}
+
+.todo:hover button:not(.checkbox) {
+    opacity: 1;
+}
+
+.todo-edit-form {
+    display: flex;
+    font-size: 1rem;
+    padding: .85em;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+
+.todo-edit-form input {
+    flex: 1;
+}
+
+.todo-edit-form .save {
+    margin-left: .5em;
+}
+
+/* Todo form */
+
+.todo-form {
+    display: flex;
+    background-color: #FAFAFA;
+    border-top: 1px solid rgba(0,0,0,.1);
+    padding: 10px;
+}
+
+.todo-form input {
+    flex: 1;
+    outline: none;
+    transition: all .2s;
+}
+
+.todo-form input:focus {
+    border: 1px solid #00d8ff;
+}
+
+.todo-form button {
+    margin-left: 10px;
+}
+
+.wrapperCenter {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+}
+.container {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 80vw;
+}
+
+.profile {
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    margin: 25px;
+}
+
+.profile__photo {
+    height: 300px;
+    width: 300px;
+}
+
+.profile__links {
+    margin-top: -30px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+}
+.profile__links a {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    color: #0077B5;
+    background-color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.5em;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    transition: 0.2s;
+    margin: 0 10px;
+}
+
+.profile__links a:hover {
+    transform: translateY(5px);
+    -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+}
+
+.profile__info {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: -5px;
+    height: 188px;
+    padding: 0 50px;
+}
+
+.profile__name {
+    color: #00446A;
+}
+
+.profile__position {
+    color: #4A4A4A;
+    margin-top: -16px;
+}
+
+.profile__quote {
+    margin-top: 30px;
+    color: #9B9B9B;
+    font-style: italic;
+}
+
+.profile__quote::before {
+    content: '\"';
+}
+.profile__quote::after {
+    content: '\"';
+}
